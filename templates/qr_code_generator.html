@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}QR Code Generator - Gimhan Technologies{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2 class="text-center my-4">QR Code Generator</h2>
+    <form method="POST" class="text-center">
+        <div class="form-group">
+            <input type="text" name="data" class="form-control" placeholder="Enter data for QR code" required>
+        </div>
+        <button type="submit" class="btn btn-primary mt-3">Generate QR Code</button>
+    </form>
+</div>
+{% endblock %}

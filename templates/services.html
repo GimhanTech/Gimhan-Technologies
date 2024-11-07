@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}Services - Gimhan Technologies{% endblock %}
+
+{% block content %}
+    <div class="text-center my-4">
+        <img src="{{ url_for('static', filename='images/service.jpg') }}" alt="Services" style="max-width: 600px;" class="img-fluid">
+        <h2 class="mt-4">Our Services</h2>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            {% for service in services %}
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <img src="{{ url_for('static', filename=service.image) }}" class="card-img-top" alt="{{ service.name }}">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ service.name }}</h5>
+                            <p class="card-text">{{ service.description }}</p>
+                            <a href="{{ service.url }}" class="btn btn-primary">Use Service</a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

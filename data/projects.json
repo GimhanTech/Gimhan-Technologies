@@ -1,0 +1,22 @@
+[
+    {
+        "id": 0,
+        "title": "Arduino Bluetooth car",
+        "description": "This is a mobile phone controlled Arduino Bluetooth car project.\n Want componenets...\n 1. Arduino Board\n 2. HC-06 Bluetooth Module.\n   3. Gear motors and wheels\n  4. car chasic\n  5. Motor Driver\n  6. 18650 Battery clip and pack.\n  7. Jumping Wires",
+        "youtube_id": "u6noJSV4DNQ?si=EnOSLL7TDXtfTggh",
+        "thumbnail_url": "/static/images/bluetooth control car.jpg",
+        "source_code": "/static/downloads/Login-Form.zip",
+        "source_preview": "def hello_world()",
+        "category": "Arduino"
+    },
+    {
+        "id": 1,
+        "title": "Arduino Object Avoiding Car",
+        "description": "This is a Arduino object avoiding car. Using Ultrasonic sensor...\n Want componenets...\n 1. Arduino Board (Uno, Nano, Mega or similar board)\n  2. Ultrasonic Sensor\n  3. Servo Motor\n  4. Motor Driver\n  5. Gear motors and wheels\n  6. car chasic\n  7. 18650 Battery clip and pack.\n  8. Jumping Wires",
+        "youtube_id": "etVX0XkBX4o?si=7IN8hGRZ08arJTAu",
+        "thumbnail_url": "/static/images/object avoiding car.jpg",
+        "source_code": "/static/downloads/Login-Form-Copy.zip",
+        "source_preview": "def greet_user(name):\n          print(f'Hello, {name}!')",
+        "category": "Arduino"
+    }
+]

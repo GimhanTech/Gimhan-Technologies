@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}Weather Station - Gimhan Technologies{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2 class="text-center my-4">Weather Station</h2>
+    <form method="POST" class="text-center">
+        <div class="form-group">
+            <input type="text" name="city" class="form-control" placeholder="Enter City" required>
+        </div>
+        <button type="submit" class="btn btn-primary mt-3">Get Weather</button>
+    </form>
+
+    {% if weather_data %}
+    <div class="weather-info mt-4">
+        <h4>{{ weather_data.name }} Weather</h4>
+        <p>Temperature: {{ weather_data.main.temp }}°C</p>
+        <p>Weather: {{ weather_data.weather[0].description | capitalize }}</p>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}

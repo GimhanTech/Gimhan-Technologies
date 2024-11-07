@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}Grammar Analyzer - Gimhan Technologies{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2 class="text-center my-4">Grammar Analyzer</h2>
+
+    <!-- Form for Grammar Analyzer -->
+    <form id="grammarAnalyzerForm" method="POST" class="text-center">
+        <div class="form-group">
+            <textarea name="text" class="form-control" rows="4" placeholder="Enter text to analyze..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary mt-3">Analyze Grammar</button>
+    </form>
+
+    <!-- Display corrected text -->
+    {% if corrected_text %}
+    <div class="result mt-4">
+        <h4>Corrected Text:</h4>
+        <p>{{ corrected_text }}</p>
+    </div>
+    {% endif %}
+
+    <!-- Loading spinner overlay -->
+    <div id="loadingOverlay" class="loading-overlay">
+        <div class="spinner-border text-primary" role="status">
+            <span class="sr-only">Analyzing Grammar...</span>
+        </div>
+        <p>Processing, please wait...</p>
+    </div>
+</div>
+{% endblock %}

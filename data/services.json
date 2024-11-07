@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Background Remover",
+        "description": "Quickly remove backgrounds from images with advanced AI.",
+        "image": "images/bg_remover.jpg",
+        "url": "/services/background-remover"
+    },
+    {
+        "name": "Weather Station",
+        "description": "Get live weather updates for any location, including temperature, humidity, and forecast.",
+        "image": "images/weather_station.jpg",
+        "url": "/services/weather-station"
+    },
+    {
+        "name": "Grammar Analyzer",
+        "description": "Analyze your text for grammar, punctuation, and style to make it clear and error-free.",
+        "image": "images/grammar_analyzer.jpg",
+        "url": "/services/grammar-analyzer"
+    },
+    {
+        "name": "QR Code Generator",
+        "description": "Create custom QR codes for links, text, and more with just a few clicks.",
+        "image": "images/qr_generator.jpg",
+        "url": "/services/qr-code-generator"
+    }
+]

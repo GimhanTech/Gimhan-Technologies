@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{{ project.title }}</h1>
+
+<div class="video-container">
+    <iframe width="100%" height="500" src="https://www.youtube.com/embed/{{ project.youtube_id }}"
+            title="{{ project.title }}" frameborder="0" allowfullscreen></iframe>
+</div>
+
+<p>{{ project.description }}</p>
+
+<!-- Green download button -->
+<a href="{{ project.source_code }}" class="btn download-btn" download>Download Source Code</a>
+
+<h2>Source Code Preview</h2>
+<pre class="source-preview">
+    {{ project.source_preview }}
+</pre>
+
+<h2>Similar Projects</h2>
+<div class="suggestions">
+    {% for similar in similar_projects %}
+    <div class="suggestion-item">
+        <img src="{{ similar.thumbnail_url }}" alt="{{ similar.title }}">
+        <h3>{{ similar.title }}</h3>
+        <a href="{{ url_for('project_detail', project_id=similar.id) }}">Learn More</a>
+    </div>
+    {% endfor %}
+</div>
+
+<style>
+    .video-container {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+    .download-btn {
+        background-color: #28a745;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+    }
+    .download-btn:hover {
+        background-color: #218838;
+    }
+    .source-preview {
+        background-color: #f7f7f7;
+        padding: 15px;
+        border-radius: 5px;
+        white-space: pre-wrap; /* Ensures code is formatted correctly */
+        font-family: monospace; /* Optional: Use a monospace font for code */
+    }
+    .suggestions {
+        display: flex;
+        gap: 20px;
+    }
+    .suggestion-item {
+        width: 30%;
+    }
+    .suggestion-item img {
+        width: 100%;
+        height: auto;
+    }
+</style>
+
+{% endblock %}
