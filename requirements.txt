@@ -1,0 +1,8 @@
+flask
+json
+os
+rembg
+PIL
+io
+requests
+qrcode
